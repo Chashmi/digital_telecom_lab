@@ -29,7 +29,7 @@ hold off;
 
 BER10 = sum(output10 ~= tx_data10)/length(tx_data10);
 disp(BER10);
-
+%-------------------------------------------------------------------------------------------------------------------------------------
 
 t2 = 1:100;
 
@@ -59,6 +59,7 @@ hold off;
 
 BER100 = sum(output100 ~= tx_data100)/length(tx_data100);
 disp(BER100);
+%-------------------------------------------------------------------------------------------------------------------------------------
 
 
 t3 = 1:1000;
@@ -89,6 +90,7 @@ hold off;
 
 BER1000 = sum(output1000 ~= tx_data1000)/length(tx_data1000);
 disp(BER1000);
+%-------------------------------------------------------------------------------------------------------------------------------------
 
 
 t4 = 1:10000;
@@ -119,6 +121,7 @@ hold off;
 
 BER10000 = sum(output10000 ~= tx_data10000)/length(tx_data10000);
 disp(BER10000);
+%-------------------------------------------------------------------------------------------------------------------------------------
 
 Transmitting the bits with the power of 5
 
@@ -152,6 +155,7 @@ hold off;
 
 BER10_with_power = sum(output10_with_power ~= tx_data10_with_power)/ length(tx_data10_with_power);
 disp(BER10_with_power);
+%-------------------------------------------------------------------------------------------------------------------------------------
 
 
 t6 = 1:10000;
@@ -182,6 +186,7 @@ hold off;
 
 BER10000_with_power = sum(output10000_with_power ~= tx_data10000_with_power)/length(tx_data10000_with_power);
 disp(BER10000_with_power);
+%-------------------------------------------------------------------------------------------------------------------------------------
 
 
 
@@ -213,6 +218,7 @@ hold off;
 % Correct BER
 BER100000_with_power = sum(output100000_with_power ~= tx_data100000_with_power) / length(tx_data100000_with_power);
 disp(BER100000_with_power);
+%-------------------------------------------------------------------------------------------------------------------------------------
 
 Transmitting the bits with the weaker noise
 t8 = 1:10;
@@ -245,6 +251,7 @@ hold off;
 
 BER10_weaker = sum(output10_weaker ~= tx_data10_weaker_noise)/length(tx_data10_weaker_noise);
 disp(BER10_weaker);
+%-------------------------------------------------------------------------------------------------------------------------------------
 
 
 t9 = 1:10000;
@@ -277,6 +284,7 @@ hold off;
 
 BER10000_weaker = sum(output10000_weaker ~= tx_data10000_weaker_noise)/length(tx_data10000_weaker_noise);
 disp(BER10000_weaker);
+%-------------------------------------------------------------------------------------------------------------------------------------
 
 
 t10 = 1:100000;
@@ -309,6 +317,7 @@ hold off;
 
 BER100000_weaker = sum(output100000_weaker ~= tx_data100000_weaker_noise) / length(tx_data100000_weaker_noise);
 disp(BER100000_weaker);
+%-------------------------------------------------------------------------------------------------------------------------------------
 
 
 SNR value
@@ -358,6 +367,7 @@ disp(['Signal Power = ', num2str(P_signal_sn)]);
 disp(['Noise Power = ', num2str(P_noise_sn)]);
 disp(['SNR (linear) = ', num2str(SNR_linear_sn)]);
 disp(['SNR (dB) = ', num2str(SNR_dB_sn)]);
+%-------------------------------------------------------------------------------------------------------------------------------------
 
 
 % SNR by Matlab values----------------------------10000
@@ -406,6 +416,7 @@ disp(['Signal Power = ', num2str(P_signal_sn10000)]);
 disp(['Noise Power = ', num2str(P_noise_sn10000)]);
 disp(['SNR (linear) = ', num2str(SNR_linear_sn10000)]);
 disp(['SNR (dB) = ', num2str(SNR_dB_sn10000)]);
+%-------------------------------------------------------------------------------------------------------------------------------------
 
 
 % SNR by Matlab values----------------------------100000
@@ -454,6 +465,7 @@ disp(['Signal Power = ', num2str(P_signal_sn100000)]);
 disp(['Noise Power = ', num2str(P_noise_sn100000)]);
 disp(['SNR (linear) = ', num2str(SNR_linear_sn100000)]);
 disp(['SNR (dB) = ', num2str(SNR_dB_sn100000)]);
+%-------------------------------------------------------------------------------------------------------------------------------------
 
 
 SNR TARGET = 10dB
@@ -489,6 +501,7 @@ for s = scales
     % Show result for this scale
     fprintf('Scale = %.2f | SNR = %.2f dB | BER = %.5f\n', s, SNR_dB_manual, BER_manual);
 end
+%-------------------------------------------------------------------------------------------------------------------------------------
 
 
 % SNR values (in dB)
